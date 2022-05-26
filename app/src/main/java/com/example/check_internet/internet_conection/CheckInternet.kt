@@ -9,15 +9,17 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 
-class ConectionCheckFragment( private val connectivityManager: ConnectivityManager) :
+class CheckInternet (private val connectivityManager: ConnectivityManager) :
         LiveData<Boolean>(
-        ){
+        ) {
 
-            constructor(application: Application) : this(
-                application.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-            )
+
+    constructor(application: Application) : this(
+        application.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    )
+
     private val networkCallback = @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    object : ConnectivityManager.NetworkCallback(){
+    object : ConnectivityManager.NetworkCallback() {
 
         override fun onAvailable(network: Network) {
             super.onAvailable(network)
@@ -43,4 +45,6 @@ class ConectionCheckFragment( private val connectivityManager: ConnectivityManag
         super.onInactive()
         connectivityManager.unregisterNetworkCallback(networkCallback)
     }
+
+
 }

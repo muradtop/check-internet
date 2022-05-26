@@ -13,4 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "check-internet"
-include ':app'
+include(":app")
+
+
