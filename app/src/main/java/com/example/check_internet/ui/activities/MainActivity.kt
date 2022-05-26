@@ -1,9 +1,7 @@
-package com.example.check_internet.ui.activity
+package com.example.check_internet.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.check_internet.R
 
 class MainActivity : AppCompatActivity() {

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Checkinternet">
         <activity
-            android:name=".internet_conection.ConnectionCheck"
+            android:name=".ui.activities.ConnectionCheckActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

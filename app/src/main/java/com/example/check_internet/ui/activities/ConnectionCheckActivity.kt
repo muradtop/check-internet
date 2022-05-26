@@ -1,13 +1,14 @@
-package com.example.check_internet.internet_conection
+package com.example.check_internet.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.check_internet.databinding.CheckConectionBinding
+import com.example.check_internet.internet_conection.CheckInternet
 
 
-class ConnectionCheck : AppCompatActivity() {
+class ConnectionCheckActivity : AppCompatActivity() {
 
     private lateinit var cld : CheckInternet
     private lateinit var binding : CheckConectionBinding
